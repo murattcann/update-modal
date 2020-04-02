@@ -1,0 +1,26 @@
+{
+    "name": "murattcann/update-modal",
+    "description": "Basic package for updating operations with bootstrap modal.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Murat CAN",
+            "email": "muratcan.php@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Murattcann\\UpdateModal\\": "package/update-modal/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Murattcann\\UpdateModal\\UpdateModalServiceProvider"
+            ]
+        }
+    }
+}
