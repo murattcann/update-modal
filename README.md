@@ -29,10 +29,7 @@ You can use this to update any kind of database table field as live. Lets get st
 <p>I assume you have products table like this:</p>
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/productsIndexWithoutPackage.png" width="60%" height="30%"> 
 
-<img src="https://github.com/murattcann/update-package-readme-images/blob/master/htmlTableWithoutPacage.png" width="60%" height="20%"> 
-
-> Note: "tr" tag in the @foreach loop must have id as product id. 
-This feature provides us to change table cell that we changed.
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/newhtmlTableWithoutPacage.png" width="60%" height="20%"> 
 
 ### <span id="including-modal"> Including Modal </span>
 
@@ -45,9 +42,9 @@ This parameter our modals new title. You can just write "Edit". </p>
 
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/includeJS.png" width="60%" height="20%"> 
 
-<p>Now you should include button blade view to the corresponding table <code> td </code> tag with with specified parameters like this: </p>
+<p>Now, you should include button blade view to the corresponding table <code> td </code> tag with with specified parameters like this: </p>
 
-<img src="https://github.com/murattcann/update-package-readme-images/blob/master/htmlTableWithPackage.png" width="60%" height="20%"> 
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/newhtmlTableWithPackage.png" width="60%" height="20%"> 
 
 <p>The process we just did should give us this result on the index page:</p>
 
@@ -79,13 +76,13 @@ It is because of "inputType" parameter which we passed to included view.</p>
 <p> Now, we should have a helper to generate button as we want.</p>
 <p> Let's say, I want to edit priority field with this package.</p>
 <p>We must have some functions to do so. </p>
-<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/actionButtonClass.png" width="50%" height="20%"> 
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/newactionButtonClass.png" width="50%" height="20%"> 
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/actionButtonClass2.png" width="50%" height="20%"> 
 
 <p>After this step, you should edit <code>ServiceDataTable.php</code> file according to your wish.
 As I said before, I want to edit priority field. So, I should make such a change:
 </p>
-<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/serviceDataTable.png" width="50%" height="20%"> 
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/newserviceDataTable.png" width="50%" height="20%"> 
 
 <p>This is the different side of yajrabox. Other steps are same with html table.</p>
 <p>Now, you should include modal view and update blade file as we did before.</p>
