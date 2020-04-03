@@ -6,7 +6,6 @@
    data-attribute-name="{{$attributeName}}"
    data-attribute-value="{{$attributeValue}}"
    data-route = "{{$route}}"
-   data-table-cell="{{$tableCellToChange}}"
    data-input-type="{{ $inputType }}"
    data-method="PUT"
 >

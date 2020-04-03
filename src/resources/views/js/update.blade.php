@@ -37,7 +37,7 @@
 
 
             $tableCellToChange = $(this).data('table-cell');
-            $attributeTableRow = $('table tr[id="' + $id + '"] td:nth-child(' + $tableCellToChange + ')');
+            $attributeTableRow = $(this).closest("td");
 
             $attributeName = $(this).data('attribute-name');
             $attributeValue = $(this).data('attribute-value');
