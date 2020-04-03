@@ -1,4 +1,4 @@
-# update-modal
+# update-modal Package To Edit Any Table Cell With Laravel, Ajax, Jquery and Bootstrap
 This package developed for edit-update any database field with Bootstrap modal and JQuery/Ajax.
 
 <ul> 
