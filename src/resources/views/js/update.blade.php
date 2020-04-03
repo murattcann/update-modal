@@ -6,11 +6,20 @@
 <script>
     $(function () {
 
+        // Variables for modal
         let $modal, $form, $formData, $input, $inputType;
-        let $id, $route, $tableCellToChange, $attributeValue, $attributeName;
-        let $attributeTableRow, $newCellData;
 
+        //Variables for button
+        let $id, $route, $attributeValue, $attributeName;
+        let $tableCellToChange, $newCellData;
+
+        //Update button on the modal
         let $updateButton = $('#modal-update-button');
+
+        // Message type enum for post ajax request
+        const $SUCCESS_MESSAGE_TYPE = "success";
+        const $ERROR_MESSAGE_TYPE   = "error";
+
 
         $(document).on('click', '.edit-attribute-button', function () {
 
@@ -35,9 +44,7 @@
                 $('#edit-modal-textarea').hide();
             }
 
-
-            $tableCellToChange = $(this).data('table-cell');
-            $attributeTableRow = $(this).closest("td");
+            $tableCellToChange = $(this).closest("td");
 
             $attributeName = $(this).data('attribute-name');
             $attributeValue = $(this).data('attribute-value');
@@ -83,23 +90,16 @@
 
                     $newCellData = reBuildButton($id, $route, $attributeName, $inputValue, $tableCellToChange);
 
-                    $attributeTableRow.html($newCellData);
+                    $tableCellToChange.html($newCellData);
 
                     $modal.modal('hide');
 
-                        toastr.options.closeButton = false;
-                        toastr.options.closeMethod = 'fadeOut';
-                        toastr.options.timeout=1000;
-                        toastr.options.closeDuration = 1000;
-                        toastr.success(response.message);
-
+                    toastMessage($SUCCESS_MESSAGE_TYPE, response.message);
 
                 },
                 error: function () {
-                    toastr.options.closeButton = false;
-                    toastr.options.closeMethod = 'fadeOut';
-                    toastr.options.closeDuration = 100;
-                    toastr.error("Something went wrong");
+
+                   toastMessage($ERROR_MESSAGE_TYPE);
                 }
             });
         }));
@@ -121,6 +121,24 @@
 
             return $_html;
         }
+
+        function toastMessage($type, $message = null) {
+
+            toastr.options.closeButton = false;
+            toastr.options.closeMethod = 'fadeOut';
+            toastr.options.timeout=1000;
+            toastr.options.closeDuration = 1000;
+
+            if($type === $SUCCESS_MESSAGE_TYPE)
+            {
+               return toastr.success($message);
+            }
+            else
+            {
+                return toastr.error("Something went wrong...");
+            }
+        }
+
     });
 
 </script>
