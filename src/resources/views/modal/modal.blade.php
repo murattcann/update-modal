@@ -22,8 +22,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('modal.Close')}}</button>
-                <button type="button" class="btn btn-primary modal-update-button" id="modal-update-button" model-id=""><i class="fa fa-save"></i>{{trans('modal.Update')}}</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary modal-update-button" id="modal-update-button" model-id=""><i class="fa fa-save"></i>Update</button>
             </div>
         </div>
     </div>
