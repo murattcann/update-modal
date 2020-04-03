@@ -5,13 +5,13 @@ This package developed for edit-update any database field with Bootstrap modal a
   <li><a href="#installation">Installation</a></li>
   <li><a href="#get-started">Get Started </a></li>
   <li>
-    <a href="#installation">Usage With Html Table</a>
+    <a href="#usage-with-html-table">Usage With Html Table</a>
     <ul>
         <li><a href="#including-modal">Including Package Views</a></li>
     </ul>
   </li>
    
-  <li><a href="#installation">Usage With yajrabox/datatable</a></li>
+  <li><a href="#usage-with-yajrabox">Usage With yajrabox/datatable</a></li>
  
 </ul>
 
@@ -25,9 +25,7 @@ This package developed for edit-update any database field with Bootstrap modal a
 You can use this to update any kind of database table field as live. Lets get started!
 </p>
 
-## <span> Usage With yajrabox/datatables </span>
-  
-## <span> Usage With Html Table </span>
+## <span id="usage-with-html-table"> Usage With Html Table </span>
 <p>I assume you have products table like this:</p>
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/productsIndexWithoutPackage.png" width="60%" height="30%"> 
 
@@ -63,5 +61,34 @@ It is because of "inputType" parameter which we passed to included view.</p>
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/priceClicked.png" width="50%" height="20%"> 
 <img src="https://github.com/murattcann/update-package-readme-images/blob/master/titleClicked.png" width="50%" height="20%"> 
 
-    
-# To be continued...
+## <span id="usage-with-yajrabox"> Usage With yajrabox/datatables </span>
+
+<p> 
+    If you use yajrabox datatables package you can also integrate for this. But there is a little bit difference between traditional html tables and yajrabox datatable.
+    You know, yajrabox package is rendering table view on server side. So, you haven't got a table which you can edit on the view files.
+</p>
+
+<p>
+    Yajrabox package generates table from server side and you should only write <code>{!! $dataTable->table() !!}</code> 
+    on view page that you would like to use. As you can see, there is no html table to edit cells. So, how can we do this editing things in this case? Lets get started.
+</p>
+
+<p> I assueme you have services table like this:</p>
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/index.png" width="50%" height="20%"> 
+
+<p> Now, we should have a helper to generate button as we want.</p>
+<p> Let's say, I want to edit priority field with this package.</p>
+<p>We must have some functions to do so. </p>
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/actionButtonClass.png" width="50%" height="20%"> 
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/actionButtonClass2.png" width="50%" height="20%"> 
+
+<p>After this step, you should edit <code>ServiceDataTable.php</code> file according to your wish.
+As I said before, I want to edit priority field. So, I should make such a change:
+</p>
+<img src="https://github.com/murattcann/update-package-readme-images/blob/master/yajra/serviceDataTable.png" width="50%" height="20%"> 
+
+<p>This is the different side of yajrabox. Other steps are same with html table.</p>
+<p>Now, you should include modal view and update blade file as we did before.</p>
+
+>If you encounter any errors or problems, contact with me.
+
